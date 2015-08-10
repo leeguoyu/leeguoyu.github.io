@@ -4,7 +4,7 @@
   <title><![CDATA[Isaac's Tech & Music]]></title>
   <link href="http://yik-sei.rocks/atom.xml" rel="self"/>
   <link href="http://yik-sei.rocks/"/>
-  <updated>2015-08-10T16:12:26+08:00</updated>
+  <updated>2015-08-10T17:41:03+08:00</updated>
   <id>http://yik-sei.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[test]]></title>
+    <link href="http://yik-sei.rocks/14391996455933.html"/>
+    <updated>2015-08-10T17:40:45+08:00</updated>
+    <id>http://yik-sei.rocks/14391996455933.html</id>
+    <content type="html"><![CDATA[
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[黑马iOS笔记]]></title>
