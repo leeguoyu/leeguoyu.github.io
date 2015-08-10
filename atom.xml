@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Isaac's Tech & Music]]></title>
+  <link href="http://yik-sei.rocks/atom.xml" rel="self"/>
+  <link href="http://yik-sei.rocks/"/>
+  <updated>2015-08-10T16:12:26+08:00</updated>
+  <id>http://yik-sei.rocks/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.coderforart.com/">CoderForArt</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[黑马iOS笔记]]></title>
+    <link href="http://yik-sei.rocks/14391942124795.html"/>
+    <updated>2015-08-10T16:10:12+08:00</updated>
+    <id>http://yik-sei.rocks/14391942124795.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>注释的用途——创建方法名
+在方法明上方可用<code>/** 方法名 */</code> 的格式，这样创建的方法便会有中文方法名提示。如：</li>
+</ul>
+
+<pre><code class="language-js">/** 创建表格 */
+-(void)createtable{
+
+    };
+</code></pre>
+
+<p>如下图<br/>
+<img src="media/14240102440099/11.png" alt="11"/></p>
+
+<ul>
+<li>改代码之前先把旧的注释掉，改完无误再删除。</li>
+<li>定义属性的时候，带<code>*</code>号的是地址，不是<code>strong</code>就是<code>weak</code>；没<code>*</code>号的比如<code>int</code>类型，就用<code>assign</code>。</li>
+<li>懒加载</li>
+</ul>
+
+<p><img src="media/14240102440099/14240147005230.jpg" alt=""/></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GeekBand（二）iOS应用开发实战]]></title>
+    <link href="http://yik-sei.rocks/14381590028220.html"/>
+    <updated>2015-07-29T16:36:42+08:00</updated>
+    <id>http://yik-sei.rocks/14381590028220.html</id>
+    <content type="html"><![CDATA[
+<h2>第二周</h2>
+
+<h3>MVC 模式</h3>
+
+<p>C 属于 M 和 V 之间的桥梁作用。V 和 M 一般没有直接联系，不直接进行通信。</p>
+
+<h3>创建导航条、底栏和底栏的按钮的逻辑</h3>
+
+<ol>
+<li>实例化一个 viewController</li>
+<li>实例化一个 navigationController，并用上面的 viewController 把它初始化</li>
+<li>为 navigationController设置标题、图标</li>
+<li>重复以上步骤得到足够的数量后</li>
+<li>实例化一个 tabBarController</li>
+<li>tabBarController 其实是一个数组，往数组里填上以上 navigationController</li>
+<li>设定该 window 的 rootViewController 为该 tabBarController</li>
+</ol>
+
+<h3>善用父类去统一设置不同 viewController 里一样的对象</h3>
+
+<p>比如说5个 viewController 都需要背景图，可以创建一个 baseViewController，里面写上统一的背景图的设置。然后让这些不同的 viewController 都继承自这个 baseViewController，再分别在这些 viewController 里写入不同参数即可——子类可直接调用父类的属性，需要注意的是，父类的属性必须写在<code>.h</code>文件里。</p>
+
+<h3>比较好的拉伸图片的方法</h3>
+
+<ol>
+<li>先对旧图创建一个 UIImage</li>
+<li>再创建一个新的 UIImage，对旧图用类方法 <code>[oldImage stretchableImageWithLeftCapWidth:10 topCapHeight:10]</code> 处理</li>
+<li>在需要用的地方放入<strong>新</strong>图即可
+<img src="media/14381590028220/14383949127417.jpg" alt=""/></li>
+</ol>
+
+<h3>为了不被诸多的 tag 搞乱</h3>
+
+<p>可以把 tag 定义成宏，比如 <code>#define kPushButtonTag    100</code></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GeekBand（一）OC 高级编程]]></title>
+    <link href="http://yik-sei.rocks/14377181857529.html"/>
+    <updated>2015-07-24T14:09:45+08:00</updated>
+    <id>http://yik-sei.rocks/14377181857529.html</id>
+    <content type="html"><![CDATA[
+<h3>do 循环：</h3>
+
+<p>一直做某件事情，直到某个条件不成立</p>
+
+<h3>continue：</h3>
+
+<p>跳过本次循环，进入下一次；而 break 则是跳出整个循环</p>
+
+<h3>条件运算符：</h3>
+
+<p><img src="media/14377181857529/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="条件运算符"/><br/>
+这张图的意思是当<code>age</code> 大于等于<code>18</code>时，<code>test</code>的值为<code>9</code>，否则为<code>10</code>。上方的条件运算符完全等价于下方的<code>if-else</code>表达式</p>
+
+<h3>限定词：</h3>
+
+<ul>
+<li><p><code>nonatomic</code>, <code>atomic</code>——原子的，同一时间只允许有一个线程访问，如果同时有多个线程/任务访问，那就要排队，会影响程序效率。所以一般会用「非原子的 <code>nonatomic</code>」，但相对而言，它的安全性会比<code>atomic</code>低。</p></li>
+<li><p><code>copy</code>——会复制一份出来，不会影响到原有的数据</p></li>
+<li><p><code>retain</code>——会导致对象的引用计数加 1</p></li>
+<li><p><code>strong</code>, <code>weak</code>——4.0之后才出现的，强引用和弱引用。<code>strong</code>等价于<code>retain</code>，<code>weak</code>等价于<code>assign</code>，不过<code>weak</code>只能用在对象性数据上</p></li>
+<li><p><code>assign</code>——一般用于修饰基本数据类型，比如 int，float 等无需星号的数据类型</p></li>
+<li><p><code>readonly</code>——只读，无法修改</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
