@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Yik-sai Tech & Music]]></title>
-  <link href="http://yik-sei.rocks/atom.xml" rel="self"/>
-  <link href="http://yik-sei.rocks/"/>
-  <updated>2015-08-11T10:55:58+08:00</updated>
-  <id>http://yik-sei.rocks/</id>
+  <title><![CDATA[Yik-sai Code & Music]]></title>
+  <link href="http://yik-sai.rocks/atom.xml" rel="self"/>
+  <link href="http://yik-sai.rocks/"/>
+  <updated>2015-08-11T11:58:03+08:00</updated>
+  <id>http://yik-sai.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[好Riff献给你，让爱传千里 — 第二集 || Guns'N'Roses - Catcher in the Rye]]></title>
-    <link href="http://yik-sei.rocks/14392006653218.html"/>
+    <link href="http://yik-sai.rocks/14392006653218.html"/>
     <updated>2015-08-10T17:57:45+08:00</updated>
-    <id>http://yik-sei.rocks/14392006653218.html</id>
+    <id>http://yik-sai.rocks/14392006653218.html</id>
     <content type="html"><![CDATA[
 <p>今天讲一点点硬摇。</p>
 
@@ -103,9 +103,9 @@ And then voices ran away from me</p>
   
   <entry>
     <title type="html"><![CDATA[好Riff献给你，让爱传千里 — 第一集 || 香港独立乐队元老 AMK]]></title>
-    <link href="http://yik-sei.rocks/14392001489282.html"/>
+    <link href="http://yik-sai.rocks/14392001489282.html"/>
     <updated>2015-08-10T17:49:08+08:00</updated>
-    <id>http://yik-sei.rocks/14392001489282.html</id>
+    <id>http://yik-sai.rocks/14392001489282.html</id>
     <content type="html"><![CDATA[
 <p>作为半个金属党，相对于 solo，我其实更爱 riff。本来想憋一期《劲歌金 riff》出来的，想想这似乎更像是一个长期工作，所以倒不如试试一首一首来推介。</p>
 
@@ -140,9 +140,9 @@ And then voices ran away from me</p>
   
   <entry>
     <title type="html"><![CDATA[世上本无战事，人们只是深陷其中]]></title>
-    <link href="http://yik-sei.rocks/14391996455933.html"/>
+    <link href="http://yik-sai.rocks/14391996455933.html"/>
     <updated>2015-08-10T17:40:45+08:00</updated>
-    <id>http://yik-sei.rocks/14391996455933.html</id>
+    <id>http://yik-sai.rocks/14391996455933.html</id>
     <content type="html"><![CDATA[
 <p>近日在玩一款游戏叫《This War of Mine》，近几天才从 PC 端移植到 iPad。游戏背景是一座战火中的城市，但这次没有英雄打枪，只有几个被困在废墟里的普普通通的平民，每天在各种废墟中搜寻各种资源，确保自己可以活下去。</p>
 
@@ -227,9 +227,9 @@ And then voices ran away from me</p>
   
   <entry>
     <title type="html"><![CDATA[黑马iOS笔记]]></title>
-    <link href="http://yik-sei.rocks/14391942124795.html"/>
+    <link href="http://yik-sai.rocks/14391942124795.html"/>
     <updated>2015-08-10T16:10:12+08:00</updated>
-    <id>http://yik-sei.rocks/14391942124795.html</id>
+    <id>http://yik-sai.rocks/14391942124795.html</id>
     <content type="html"><![CDATA[
 <ul>
 <li>注释的用途——创建方法名
@@ -258,9 +258,9 @@ And then voices ran away from me</p>
   
   <entry>
     <title type="html"><![CDATA[GeekBand（二）iOS应用开发实战]]></title>
-    <link href="http://yik-sei.rocks/14381590028220.html"/>
+    <link href="http://yik-sai.rocks/14381590028220.html"/>
     <updated>2015-07-29T16:36:42+08:00</updated>
-    <id>http://yik-sei.rocks/14381590028220.html</id>
+    <id>http://yik-sai.rocks/14381590028220.html</id>
     <content type="html"><![CDATA[
 <h2>第二周</h2>
 
@@ -302,9 +302,9 @@ And then voices ran away from me</p>
   
   <entry>
     <title type="html"><![CDATA[GeekBand（一）OC 高级编程]]></title>
-    <link href="http://yik-sei.rocks/14377181857529.html"/>
+    <link href="http://yik-sai.rocks/14377181857529.html"/>
     <updated>2015-07-24T14:09:45+08:00</updated>
-    <id>http://yik-sei.rocks/14377181857529.html</id>
+    <id>http://yik-sai.rocks/14377181857529.html</id>
     <content type="html"><![CDATA[
 <h3>do 循环：</h3>
 
