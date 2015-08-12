@@ -1,1 +1,5 @@
-# leeguoyu.github.io
+# Yik-sai Code & Music
+
+##学习代码之余，音乐和写作的爱好也不能忽略。
+
+##然后听说这样找工作有加分？
