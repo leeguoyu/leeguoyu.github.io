@@ -1,5 +1,5 @@
-# Yik-sai Code & Music
+#Yik-sai Code & Music
 
-##学习代码之余，音乐和写作的爱好也不能忽略。
+##据说既会写代码又会写文章的找工作能加分？
 
-##然后听说这样找工作有加分？
+# leeguoyu.github.io
