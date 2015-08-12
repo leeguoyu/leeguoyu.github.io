@@ -4,7 +4,7 @@
   <title><![CDATA[Yik-sai Code & Music]]></title>
   <link href="http://yik-sai.rocks/atom.xml" rel="self"/>
   <link href="http://yik-sai.rocks/"/>
-  <updated>2015-08-12T13:14:07+08:00</updated>
+  <updated>2015-08-12T13:38:44+08:00</updated>
   <id>http://yik-sai.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -49,6 +49,8 @@
     myLabel.backgroundColor = [UIColor redColor];
     [view1 addSubview:myLabel];
 </code></pre>
+
+<span id="more"></span><!-- more -->
 
 <p><img src="media/14393456546888/14393475101195.jpg" alt=""/></p>
 
