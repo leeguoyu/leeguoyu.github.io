@@ -4,7 +4,7 @@
   <title><![CDATA[Yik-sai Code & Music]]></title>
   <link href="http://yik-sai.rocks/atom.xml" rel="self"/>
   <link href="http://yik-sai.rocks/"/>
-  <updated>2015-08-12T13:14:06+08:00</updated>
+  <updated>2015-08-12T13:14:07+08:00</updated>
   <id>http://yik-sai.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[
 <h3>如何创建一个标签</h3>
 
-<pre><code class="language-objc   ">UILabel * label = [[UILabel alloc] init];
+<pre><code class="language-objc">UILabel * label = [[UILabel alloc] init];
 //把label 加到界面上去
 [self.view addSubview:label];
 </code></pre>
