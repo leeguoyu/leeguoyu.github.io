@@ -4,7 +4,7 @@
   <title><![CDATA[Yik-sai]]></title>
   <link href="http://yik-sai.rocks/atom.xml" rel="self"/>
   <link href="http://yik-sai.rocks/"/>
-  <updated>2015-08-12T20:29:04+08:00</updated>
+  <updated>2015-08-13T18:32:14+08:00</updated>
   <id>http://yik-sai.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -47,6 +47,8 @@
 </code></pre>
 
 <p>在事件触发的方法里，我们只需要用<code>if else</code>或<code>switch</code>（此switch非上面的switch）语句写好判断的逻辑，即可为「开和关」设置出不同的动作。</p>
+
+<span id="more"></span><!-- more -->
 
 <h3>开关属性的设置</h3>
 
