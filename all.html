@@ -123,7 +123,7 @@
             <h4>分类</h4>
             
             <ol class="list-unstyled">
-	        <a href="iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html">iOS学习笔记&nbsp;(4)</a>
+	        <a href="iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html">iOS学习笔记&nbsp;(5)</a>
 	        
 	        
 	        
@@ -145,6 +145,157 @@
 <div itemscope itemtype="http://schema.org/Blog">
 
 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2015-08-13T16:41:36+08:00" itemprop="datePublished">2015/8/13</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html'>iOS学习笔记</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="14394552964276.html" itemprop="url">
+		GeekBand UI笔记 — 常用控件整理（一）</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h2>UISwitch开关控件的使用</h2>
+
+<h3>如何创建</h3>
+
+<p>UISwitch 的大小是固定的 W51，H31，在Frame里的宽高设定其实是没用的。</p>
+
+<pre><code class="language-objc">UISwitch *switch = [[UISwitch alloc] initWithFrame:CGRectMake(100, 100, 100, 0)];
+[self.view addSubview:switch];
+</code></pre>
+
+<p>要检验的话，可以把上面这个开关的宽高参数打印出来比较。</p>
+
+<pre><code class="language-objc">NSLog(@&quot;%f %f&quot;, switch.frame.size.width, switch.frame.size.height);
+</code></pre>
+
+<h3>开关的事件处理</h3>
+
+<p>与普通Button的<code>Touch</code>事件类型不同，开关是<code>UIControlEventValueChanged</code>。</p>
+
+<pre><code class="language-objc">[switch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+</code></pre>
+
+<p>而开关的<code>value</code>只有两种：<code>YES</code> or <code>NO</code>，比如</p>
+
+<pre><code class="language-objc">switch.on = YES;
+</code></pre>
+
+<p>在事件触发的方法里，我们只需要用<code>if else</code>或<code>switch</code>（此switch非上面的switch）语句写好判断的逻辑，即可为「开和关」设置出不同的动作。</p>
+
+<h3>开关属性的设置</h3>
+
+<p>虽然开关的大小无法改变，但其他属性还是可以自定义的。</p>
+
+<ul>
+<li>设置开状态的颜色（注意不同状态需分开设置）</li>
+</ul>
+
+<pre><code class="language-objc">switch.onTintColor = [UIColor redColor];
+</code></pre>
+
+<ul>
+<li>设置边框颜色（没有<code>on</code>字眼的）</li>
+</ul>
+
+<pre><code class="language-objc">switch.tintColor = [UIColor greenColor];
+</code></pre>
+
+<ul>
+<li>开关圆点的颜色（这个叫<code>thumb</code>）</li>
+</ul>
+
+<pre><code class="language-objc">switch.thumbTintColor = [UIColor yellowColor];
+</code></pre>
+
+<h2>UIActivityIndicatorView 活动提示（小菊花）</h2>
+
+<h3>如何创建</h3>
+
+<pre><code class="language-objc">UIActivityIndicatorView *aiView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+//风格有三种: 白色, 灰色, 白色（大）
+</code></pre>
+
+<p>大小也是系统默认的：<code>UIActivityIndicatorViewStyleWhite</code>和<code>UIActivityIndicatorViewStyleGray</code>大小是<code>20</code>，<code>UIActivityIndicatorViewStyleWhiteLarge</code>大小<code>37</code>。</p>
+
+<p>设置摆放位置</p>
+
+<pre><code class="language-objc">aiView.center = CGPointMake(160, 240);
+```   
+
+###如何开启活动提示视图的动画
+一般来说活动视图控件是由于被触发才会显示出来的，比如说加载网络数据的时候。所以在使用中，除了创建之外，还需要把以下语句放在相关的触发事件中。
+
+```objc
+//因为活动视图是一个转动的动画，所以是Animating。
+[aiView startAnimating];
+</code></pre>
+
+<p>比如以下代码，当页面加载时，活动视图会被创建并弹出，5秒后（模拟网络加载完成）会消失</p>
+
+<pre><code class="language-objc">- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    UIActivityIndicatorView * aivView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    aivView.center = CGPointMake(160, 240);
+    [self.view addSubview:aivView];
+    //弹出活动提示视图
+   [aivView startAnimating];
+   //创建一个定时器，5秒后执行下面的方法
+    NSTimer * timer =[NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(action:) userInfo:aivView repeats:NO];    
+}
+//定时器的执行方法
+-(void)action:(NSTimer *)timer{
+    UIActivityIndicatorView * actv = [timer userInfo];
+    //五秒后活动视图停止并消失
+    [actv stopAnimating];   
+}
+</code></pre>
+
+<p><strong>注：</strong>实际应用中, 我们会在这个菊花和界面中间添加一个半透明view，令页面变暗，并在防止用户等待过程中误触页面</p>
+
+<h2>UISlider 滑块控件</h2>
+
+<h3>如何创建</h3>
+
+<pre><code class="language-objc">UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(100, 100, 200, 23)];
+NSLog(@&quot;h=%f&quot;,slider.frame.size.height);
+//宽度可以任意修改，高度是固定的
+</code></pre>
+
+<h3>各种属性设置</h3>
+
+<pre><code class="language-objc">//最大最小值
+slider.minimumValue = 0;
+slider.maximumValue = 100;
+slider.value = 50; //设置初始值（滑块的初始位置）
+slider.maximumTrackTintColor = [UIColor redColor]; //滑块右边轨道的颜色
+slider.minimumTrackTintColor = [UIColor greenColor]; //左边轨道颜色
+
+//自定义滑块图片（用类方法而不是点语法设置）
+[slider setThumbImage:[UIImage imageNamed:@&quot;3.png&quot;] forState:UIControlStateNormal];
+[slider setThumbImage:[UIImage imageNamed:@&quot;3.png&quot;] forState:UIControlStateHighlighted];
+//自定义左右轨道的图片
+[slider setMaximumTrackImage:[UIImage imageNamed:@&quot;1.png&quot;] forState:UIControlStateNormal];
+[slider setMinimumTrackImage:[UIImage imageNamed:@&quot;2.png&quot;] forState:UIControlStateNormal];    
+//注意这里要加UIControlStateHightlighted的状态，否则当拖动滑块时滑块将变成原生的控件
+</code></pre>
+
+<p>事件方法的处理也是用<code>UIControlEventValueChanged</code>，跟开关不同的是滑块的值需要用<code>slider.value</code>来获取，然后做出相应判断。</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
