@@ -210,18 +210,18 @@
 //风格有三种: 白色, 灰色, 白色（大）
 </code></pre>
 
-<p>大小也是系统默认的：<code>UIActivityIndicatorViewStyleWhite</code>和<code>UIActivityIndicatorViewStyleGray</code>大小是<code>20</code>，<code>UIActivityIndicatorViewStyleWhiteLarge</code>大小<code>37</code>。</p>
+<p>大小也是系统默认的：<code>White</code>和<code>Gray</code>大小是<code>20</code>，<code>WhiteLarge</code>大小<code>37</code>。</p>
 
 <p>设置摆放位置</p>
 
 <pre><code class="language-objc">aiView.center = CGPointMake(160, 240);
-```   
+</code></pre>
 
-###如何开启活动提示视图的动画
-一般来说活动视图控件是由于被触发才会显示出来的，比如说加载网络数据的时候。所以在使用中，除了创建之外，还需要把以下语句放在相关的触发事件中。
+<h3>如何开启活动提示视图的动画</h3>
 
-```objc
-//因为活动视图是一个转动的动画，所以是Animating。
+<p>一般来说活动视图控件是由于被触发才会显示出来的，比如说加载网络数据的时候。所以在使用中，除了创建之外，还需要把以下语句放在相关的触发事件中。</p>
+
+<pre><code class="language-objc">//因为活动视图是一个转动的动画，所以是Animating。
 [aiView startAnimating];
 </code></pre>
 
