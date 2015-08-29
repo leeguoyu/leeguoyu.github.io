@@ -4,7 +4,7 @@
   <title><![CDATA[Yik-sai]]></title>
   <link href="http://yik-sai.rocks/atom.xml" rel="self"/>
   <link href="http://yik-sai.rocks/"/>
-  <updated>2015-08-19T20:34:33+08:00</updated>
+  <updated>2015-08-21T14:34:26+08:00</updated>
   <id>http://yik-sai.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,80 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[一个尚未成功的尝试 — 在UITableView的Cell中嵌入横向tableview 的实践]]></title>
+    <link href="http://yik-sai.rocks/14408668396688.html"/>
+    <updated>2015-08-30T00:47:19+08:00</updated>
+    <id>http://yik-sai.rocks/14408668396688.html</id>
+    <content type="html"><![CDATA[
+<p>项目需要做出如下效果：在一个tableview的每个cell中实现横向滚动，展示各个不同地点所对应的图片资料。</p>
+
+<p><img src="media/14408668396688/%E5%B9%BF%E5%9C%BA%E5%89%AF%E6%9C%AC.png" alt="广场副本"/></p>
+
+<p>这个效果其实不新鲜，网上应该是有不少第三方或现成的方法的。只不过刚好时间，作为新手的我还是尝试自己的思路吧。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2>思路一 — 在一个正常的tableview的每一个cell里嵌入另一个tableview</h2>
+
+<p>首先，创建了四个类 <code>SquareViewController</code>、<code>CellVertical</code>以及<code>HorizontalTableViewController</code>、<code>CellHorizontal</code>，分别是竖的tableview以及它的自定义cell，装载了<code>地址icon</code>和<code>地址</code>；横的tableview以及它的自定义cell，装载了<code>图片</code>和<code>图片配文</code>。</p>
+
+<p><img src="media/14408668396688/14408679563443.jpg" alt=""/></p>
+
+<p><strong>如何创建一个横向tableview</strong></p>
+
+<ul>
+<li>第一步 — 把<code>HorizontalTableViewController</code>逆时针旋转90度</li>
+</ul>
+
+<pre><code class="language-objc">    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 120, 60*12) style:UITableViewStylePlain];
+    //这句话的作用是把 HorizontalTableViewController 逆时针旋转90度
+    self.tableView.transform = CGAffineTransformMakeRotation(-M_PI/2);
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    //注意这一句不可缺，不然横向tableview就会错位。这个center的坐标应该是上面tableview的frame的相反的一半。
+    self.tableView.center = CGPointMake(360, 60);
+    self.tableView.showsVerticalScrollIndicator = NO;
+    
+    [self.view addSubview:self.tableView];
+</code></pre>
+
+<ul>
+<li>第二步 — 把<code>HorizontalTableViewController</code>里的cell顺时针旋转90度</li>
+</ul>
+
+<pre><code class="language-objc">- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *cellID = @&quot;cell&quot;;
+    
+    GBMSquareCellHorizontal *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[GBMSquareCellHorizontal alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    //把cell顺时针旋转90度
+    cell.contentView.transform = CGAffineTransformMakeRotation(M_PI/2);
+    
+    return cell;
+}
+</code></pre>
+
+<p>想象中这是很简单的，把四个类都设置好，然后在<code>CellVertical</code>里实例化<code>HorizontalTableViewController</code>就行了。但是实际运行时程序崩溃了，出现了以下报错。</p>
+
+<pre><code class="language-objc">[UIImageView tableView:numberOfRowsInSection:]: unrecognized selector sent to instance 0x7f9933cbd870
+</code></pre>
+
+<p>这是指该tableview的对象被释放了。通过各种排查，发现<code>HorizontalTableViewController</code>的所有代理方法都没有被执行，估计是和<code>SquareViewController</code>有冲突。</p>
+
+<h2>思路二 — 用scrollview来实现横向滑动</h2>
+
+<p>据说这才是外界比较普遍的做法，用scrollview + 仿tableview复用的形式。</p>
+
+<p><strong>待续…</strong></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给所有不喜欢大声说话的人 — 窦唯朴树的平凡之路]]></title>

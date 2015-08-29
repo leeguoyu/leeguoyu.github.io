@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>  
 	  
-  	好Riff献给你，让爱传千里 — 第一集 || 香港独立乐队元老 AMK - Yik-sai
+  	一个尚未成功的尝试 — 在UITableView的Cell中嵌入横向tableview 的实践 - Yik-sai
   	
 	</title>
 
@@ -144,35 +144,72 @@
 			<div class="mid-col-container"> <div id="content" class="inner">
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-		<h1 class="title" itemprop="name">好Riff献给你，让爱传千里 — 第一集 || 香港独立乐队元老 AMK</h1>
+		<h1 class="title" itemprop="name">一个尚未成功的尝试 — 在UITableView的Cell中嵌入横向tableview 的实践</h1>
 		<div class="entry-content" itemprop="articleBody">
-			<p>作为半个金属党，相对于 solo，我其实更爱 riff。本来想憋一期《劲歌金 riff》出来的，想想这似乎更像是一个长期工作，所以倒不如试试一首一首来推介。</p>
+			<p>项目需要做出如下效果：在一个tableview的每个cell中实现横向滚动，展示各个不同地点所对应的图片资料。</p>
 
-<p>当然 riff 并不是金属党专用，同时为了装逼及反装逼，这第一集我觉得首当其冲的就是香港元老独立乐队 AMK 的这首《请让我回家》。</p>
+<p><img src="media/14408668396688/%E5%B9%BF%E5%9C%BA%E5%89%AF%E6%9C%AC.png" alt="广场副本"/></p>
 
-<p><img src="media/14392001489282/11.jpg" alt="11"/></p>
+<p>这个效果其实不新鲜，网上应该是有不少第三方或现成的方法的。只不过刚好时间，作为新手的我还是尝试自己的思路吧。</p>
 
 <span id="more"></span><!-- more -->
 
-<p>和我年纪相仿或者比我更小一点的乐迷里，应该有很多都是听了 My Little Airport 林阿P 的介绍而知道 AMK 这个名字的。我倒已经忘记自己是不是了，但《请让我回家》的第一句「多谢你」后接踵而来全程高能的 riff，却是令我记到现在，以至于《劲歌金 riff》这个主题的灵感来源其实就是它。</p>
+<h2>思路一 — 在一个正常的tableview的每一个cell里嵌入另一个tableview</h2>
 
-<p><img src="media/14392001489282/13729_10153435759138788_7221812533438928325_n.jpg" alt="13729_10153435759138788_7221812533438928325_n"/></p>
+<p>首先，创建了四个类 <code>SquareViewController</code>、<code>CellVertical</code>以及<code>HorizontalTableViewController</code>、<code>CellHorizontal</code>，分别是竖的tableview以及它的自定义cell，装载了<code>地址icon</code>和<code>地址</code>；横的tableview以及它的自定义cell，装载了<code>图片</code>和<code>图片配文</code>。</p>
 
-<p>「多么八十年代的照片」</p>
+<p><img src="media/14408668396688/14408679563443.jpg" alt=""/></p>
 
-<p><img src="media/14392001489282/10392022_184367453787_3912473_n.jpg" alt="10392022_184367453787_3912473_n"/></p>
+<p><strong>如何创建一个横向tableview</strong></p>
 
-<p>AMK 全称「Adam met Karl」— 寓意为「亚当·斯密遇上卡尔·马克思」— 光名字就足以把各大文青震的一逼，不少大一新生更是闻风丧胆。</p>
+<ul>
+<li>第一步 — 把<code>HorizontalTableViewController</code>逆时针旋转90度</li>
+</ul>
 
-<p><img src="media/14392001489282/11667_173182393787_474273_n.jpg" alt="11667_173182393787_474273_n"/></p>
+<pre><code class="language-objc">    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 120, 60*12) style:UITableViewStylePlain];
+    //这句话的作用是把 HorizontalTableViewController 逆时针旋转90度
+    self.tableView.transform = CGAffineTransformMakeRotation(-M_PI/2);
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    //注意这一句不可缺，不然横向tableview就会错位。这个center的坐标应该是上面tableview的frame的相反的一半。
+    self.tableView.center = CGPointMake(360, 60);
+    self.tableView.showsVerticalScrollIndicator = NO;
+    
+    [self.view addSubview:self.tableView];
+</code></pre>
 
-<p>对了，如果你有听王菲，《一人分饰两角》就是 AMK 作的曲。其它的资料网上应该都能找到，我就不重复了，反正我不是考究派。前几年在香港买了他们的 20 周年纪念良心 boxset《History》，但后来发现其实他们的很多歌都过于晦涩和实验，我听了一两次就放弃了。你知啦，那个年代的香港文化人，很多心思的。</p>
+<ul>
+<li>第二步 — 把<code>HorizontalTableViewController</code>里的cell顺时针旋转90度</li>
+</ul>
 
-<p><img src="media/14392001489282/11667_173051593787_8063009_n.jpg" alt="11667_173051593787_8063009_n"/></p>
+<pre><code class="language-objc">- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *cellID = @&quot;cell&quot;;
+    
+    GBMSquareCellHorizontal *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[GBMSquareCellHorizontal alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    //把cell顺时针旋转90度
+    cell.contentView.transform = CGAffineTransformMakeRotation(M_PI/2);
+    
+    return cell;
+}
+</code></pre>
 
-<blockquote>
-<p>歌曲试听：《<a href="http://www.xiami.com/song/1769902297">请让我回家</a>》《<a href="http://www.xiami.com/song/1768968848">浪漫是你的本性</a>》</p>
-</blockquote>
+<p>想象中这是很简单的，把四个类都设置好，然后在<code>CellVertical</code>里实例化<code>HorizontalTableViewController</code>就行了。但是实际运行时程序崩溃了，出现了以下报错。</p>
+
+<pre><code class="language-objc">[UIImageView tableView:numberOfRowsInSection:]: unrecognized selector sent to instance 0x7f9933cbd870
+</code></pre>
+
+<p>这是指该tableview的对象被释放了。通过各种排查，发现<code>HorizontalTableViewController</code>的所有代理方法都没有被执行，估计是和<code>SquareViewController</code>有冲突。</p>
+
+<h2>思路二 — 用scrollview来实现横向滑动</h2>
+
+<p>据说这才是外界比较普遍的做法，用scrollview + 仿tableview复用的形式。</p>
+
+<p><strong>待续…</strong></p>
 
 		</div>
 	</article>
