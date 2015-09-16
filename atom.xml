@@ -4,7 +4,7 @@
   <title><![CDATA[Yik-sai]]></title>
   <link href="http://yik-sai.rocks/atom.xml" rel="self"/>
   <link href="http://yik-sai.rocks/"/>
-  <updated>2015-09-16T13:24:16+08:00</updated>
+  <updated>2015-09-16T13:24:17+08:00</updated>
   <id>http://yik-sai.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -801,10 +801,10 @@ And then voices ran away from me</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[About]]></title>
-    <link href="http://yik-sai.rocks/About.html"/>
+    <title type="html"><![CDATA[About Yik-sai]]></title>
+    <link href="http://yik-sai.rocks/about.html"/>
     <updated>2015-09-16T13:20:41+08:00</updated>
-    <id>http://yik-sai.rocks/About.html</id>
+    <id>http://yik-sai.rocks/about.html</id>
     <content type="html"><![CDATA[
 <p>尚未有详细介绍，欢迎到微博或Github交流。</p>
 
