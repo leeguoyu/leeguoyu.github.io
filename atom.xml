@@ -4,14 +4,13 @@
   <title><![CDATA[Yik-sai]]></title>
   <link href="http://yik-sai.rocks/atom.xml" rel="self"/>
   <link href="http://yik-sai.rocks/"/>
-  <updated>2015-08-21T14:34:26+08:00</updated>
+  <updated>2015-09-16T13:24:16+08:00</updated>
   <id>http://yik-sai.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
-  <generator uri="http://www.coderforart.com/">CoderForArt</generator>
-
+  <generator uri="http://www.mweb.im/">MWeb</generator>
   
   <entry>
     <title type="html"><![CDATA[一个尚未成功的尝试 — 在UITableView的Cell中嵌入横向tableview 的实践]]></title>
@@ -146,7 +145,7 @@
 
 <p>相比起音乐性，朴树的才华更主要地体现在了他歌词所表达的态度以及整体的气质上，更侧重文学性。音乐上，朴树刚出道就被张亚东承包了几乎所有音乐制作，两人相互的影响比如电子音色的使用也是随处可见。</p>
 
-<p><img src="media/14392736201546/53c63ee3c7674.jpg" alt="53c63ee3c7674"/><br/>
+<p><img src="media/14392736201546/53c63ee3c7674.jpg" alt="53c63ee3" class="mw_img_center" style="width:7674px;display: block; clear:both; margin: 0 auto;"/><br/>
 <u>▲电影《后会无期》片尾曲《平凡之路》的歌词</u></p>
 
 <h3>他们为什么要远离公众？</h3>
@@ -511,7 +510,7 @@ label.frame = rect;
 
 <p>我一直觉得 Axl 和他的新乐手 Bumblefoot 和 DJ Ashba 也一直承受了很多不应该的压力，总是抬不起头的感觉。所以这次我们不会提已经上了神台的《November Rain》、《Sweet Child O&#39;mine》之类欧美浪漫金曲，而是在「后Slash时代」我心中的一首沧海遗珠—《Chinese Democracy》里的《Catcher in the Rye 麦田守望者》，而且一定要是 2012 年《Live at the Hard Rock Casino, Las Vegas》现场版。</p>
 
-<p><img src="media/14392006653218/d93304862fcc694b836326f110435cc2.jpg" alt="d93304862fcc694b836326f110435cc2"/></p>
+<p><img src="media/14392006653218/d93304862fcc694b836326f110435cc2.jpg" alt="d93304862fcc694b836326f110435c" class="mw_img_center" style="width:2px;display: block; clear:both; margin: 0 auto;"/></p>
 
 <p>读过《麦》的人应该都记得主人公霍尔顿的放浪形骸，而这简直就是 Axl 前半生的真实写照。但在这首歌里，在沉寂并饱受非议多年之后，Axl 唱的是心中的苦闷，是与世界的格格不入。</p>
 
@@ -797,6 +796,17 @@ And then voices ran away from me</p>
 <li><p><code>assign</code>——一般用于修饰基本数据类型，比如 int，float 等无需星号的数据类型</p></li>
 <li><p><code>readonly</code>——只读，无法修改</p></li>
 </ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[About]]></title>
+    <link href="http://yik-sai.rocks/About.html"/>
+    <updated>2015-09-16T13:20:41+08:00</updated>
+    <id>http://yik-sai.rocks/About.html</id>
+    <content type="html"><![CDATA[
+<p>尚未有详细介绍，欢迎到微博或Github交流。</p>
 
 ]]></content>
   </entry>
