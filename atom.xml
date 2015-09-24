@@ -4,13 +4,98 @@
   <title><![CDATA[Yik-sai]]></title>
   <link href="http://yik-sai.rocks/atom.xml" rel="self"/>
   <link href="http://yik-sai.rocks/"/>
-  <updated>2015-09-16T14:01:49+08:00</updated>
+  <updated>2015-09-16T14:01:56+08:00</updated>
   <id>http://yik-sai.rocks/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[解决问题（二）]]></title>
+    <link href="http://yik-sai.rocks/14423349629558.html"/>
+    <updated>2015-09-16T00:36:02+08:00</updated>
+    <id>http://yik-sai.rocks/14423349629558.html</id>
+    <content type="html"><![CDATA[
+<h2>达人页面 —— 头部的卡片 + 顶端固定切换按钮</h2>
+
+<p>使用了<code>MXSegmentedPager</code></p>
+
+<h2>体验详情页 —— 体验简介的文字行距</h2>
+
+<pre><code class="language-objc">    NSMutableAttributedString * attributedString1 = [[NSMutableAttributedString alloc] initWithString:activityIntroLabel.text];
+    NSMutableParagraphStyle * paragraphStyle1 = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle1 setLineSpacing:14];
+    [attributedString1 addAttribute:NSParagraphStyleAttributeName value:paragraphStyle1 range:NSMakeRange(0, [activityIntroLabel.text length])];
+    [activityIntroLabel setAttributedText:attributedString1]; 
+</code></pre>
+
+<p><img src="media/14423349629558/14430179334747.jpg" alt="" class="mw_img_center" style="width:400px;display: block; clear:both; margin: 0 auto;"/></p>
+
+<h2>学到了两招利用宏减少代码量的方法</h2>
+
+<h3>字体和字号</h3>
+
+<pre><code class="language-objc">#define FONTWITHSIZE(frontSize) [UIFont fontWithName:@&quot;MicrosoftYaHei&quot; size:frontSize]
+</code></pre>
+
+<p>使用的时候</p>
+
+<pre><code class="language-objc">    activityIntroLabel.font = FONTWITHSIZE(14.0);
+</code></pre>
+
+<h3>直接输入RGB数字设置颜色</h3>
+
+<pre><code class="language-objc">#define RGB(__r, __g, __b)  [UIColor colorWithRed:(1.0*(__r)/255)\
+                                            green:(1.0*(__g)/255)\
+                                             blue:(1.0*(__b)/255)\
+                                            alpha:1.0]
+</code></pre>
+
+<p>使用的时候</p>
+
+<pre><code class="language-objc">    activityIntroLabel.textColor = RGB(155, 155, 155);
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[解决问题（一）——滑动tableview隐藏导航栏]]></title>
+    <link href="http://yik-sai.rocks/14415948116430.html"/>
+    <updated>2015-09-07T11:00:11+08:00</updated>
+    <id>http://yik-sai.rocks/14415948116430.html</id>
+    <content type="html"><![CDATA[
+<p>原来很简单，在<code>tableview</code>或<code>scrollview</code>中调用此方法即可</p>
+
+<pre><code class="language-objc">-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    
+    newContentOffsetY = scrollView.contentOffset.y;
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    
+    if (scrollView.contentOffset.y &gt; newContentOffsetY) { // 向上拖拽
+        
+        // 隐藏
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+//                     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+        //             [self.navigationController setToolbarHidden:YES animated:YES];
+        //             _viewController.tabBarController.tabBar.hidden =YES;
+        
+    }
+    else{ // 向下拖拽
+
+        // 显示
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        
+    }
+}
+</code></pre>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[一个尚未成功的尝试 — 在UITableView的Cell中嵌入横向tableview 的实践]]></title>
