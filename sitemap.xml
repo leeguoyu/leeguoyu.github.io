@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>http://yik-sai.rocks/</loc>
-  <lastmod>2015-09-24T10:20:41+08:00</lastmod>
+  <lastmod>2015-10-14T14:55:04+08:00</lastmod>
+</url>
+
+<url>
+  <loc>http://yik-sai.rocks/14446574444255.html</loc>
+  <lastmod>2015-10-12T21:44:04+08:00</lastmod>
 </url>
 
 <url>
@@ -73,15 +78,15 @@
 
 
 <url>
-  <loc>http://yik-sai.rocks/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</loc>
-</url>
-
-<url>
   <loc>http://yik-sai.rocks/%E8%AF%91%E8%A5%BF.html</loc>
 </url>
 
 <url>
   <loc>http://yik-sai.rocks/%E5%9B%A2%E9%98%9FiOS%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95.html</loc>
+</url>
+
+<url>
+  <loc>http://yik-sai.rocks/iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</loc>
 </url>
 
 
