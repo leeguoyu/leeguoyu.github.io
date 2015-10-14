@@ -1,0 +1,965 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Yik-sai
+  
+
+  </title>
+  <link href="atom.xml" rel="alternate" title="Yik-sai" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        <li id="menu_item_index"><a href="index.html">HOME</a></li>
+        <li id="menu_item_archives"><a href="archives.html">Archives</a></li>
+        <li id="menu_item_about"><a href="about.html">ABOUT</a></li>
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" action="http://google.com/search" method="get">
+    <input type="hidden" name="q" value="site:yik-sai.rocks" />
+    <input tabindex="1" type="search" name="q"  placeholder="Search"/>
+</form>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
+
+</nav>
+
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; Yik-sai</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+       
+       <li><a href="index.html">HOME</a></li>
+    <li><a href="archives.html">Archives</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="%E5%9B%A2%E9%98%9FiOS%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95.html">团队iOS开发记录</a></li>
+        
+            <li><a href="iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html">iOS学习笔记</a></li>
+        
+            <li><a href="%E8%AF%91%E8%A5%BF.html">译西</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+ <script type="text/javascript">
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
+</script>
+<div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="14446574444255.html">
+                
+                  <h1>Shakedown 1979</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>消失了好一阵子，思考人生去了。思考完过后呢，喜欢的东西当然还是会写的。</p>
+
+<p>今天的主角是「The Smashing Pumpkins 碎南瓜」的一首歌《1979》。</p>
+
+<p>碎瓜是我大学时最喜欢的乐队，之一。没有之一的那是 The Cure，我人生第一笔兼职工资买的就是《The Cure: Trilogy - Live in Berlin》。</p>
+
+<p>一开始我从来没听说过碎瓜，后来宿舍有个家伙觉得我挺逼的，不能输给我，就从家里拿了这张碟回来显摆。结果它马上就成了我接下来每个寒暑假的床头之物（当时比较穷，只有放假时才能借拥有「real！黄金主板」的另一室友的discman回家听）。</p>
+
+<p><img src="media/14446574444255/14446600252429.jpg" alt=""/></p>
+
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                   <a href="14446574444255.html">Read more</a>&nbsp;&nbsp; 
+                    <span class="date">2015/10/12</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E8%AF%91%E8%A5%BF.html'>译西</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14423349629558.html">
+                
+                  <h1>解决问题（二）</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2>达人页面 —— 头部的卡片 + 顶端固定切换按钮</h2>
+
+<p>使用了<code>MXSegmentedPager</code></p>
+
+<h2>体验详情页 —— 体验简介的文字行距</h2>
+
+<pre><code class="language-objc">    NSMutableAttributedString * attributedString1 = [[NSMutableAttributedString alloc] initWithString:activityIntroLabel.text];
+    NSMutableParagraphStyle * paragraphStyle1 = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle1 setLineSpacing:14];
+    [attributedString1 addAttribute:NSParagraphStyleAttributeName value:paragraphStyle1 range:NSMakeRange(0, [activityIntroLabel.text length])];
+    [activityIntroLabel setAttributedText:attributedString1]; 
+</code></pre>
+
+<p><img src="media/14423349629558/14430179334747.jpg" alt="" class="mw_img_center" style="width:400px;display: block; clear:both; margin: 0 auto;"/></p>
+
+<h2>学到了两招利用宏减少代码量的方法</h2>
+
+<h3>字体和字号</h3>
+
+<pre><code class="language-objc">#define FONTWITHSIZE(frontSize) [UIFont fontWithName:@&quot;MicrosoftYaHei&quot; size:frontSize]
+</code></pre>
+
+<p>使用的时候</p>
+
+<pre><code class="language-objc">    activityIntroLabel.font = FONTWITHSIZE(14.0);
+</code></pre>
+
+<h3>直接输入RGB数字设置颜色</h3>
+
+<pre><code class="language-objc">#define RGB(__r, __g, __b)  [UIColor colorWithRed:(1.0*(__r)/255)\
+                                            green:(1.0*(__g)/255)\
+                                             blue:(1.0*(__b)/255)\
+                                            alpha:1.0]
+</code></pre>
+
+<p>使用的时候</p>
+
+<pre><code class="language-objc">    activityIntroLabel.textColor = RGB(155, 155, 155);
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2015/9/16</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9B%A2%E9%98%9FiOS%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95.html'>团队iOS开发记录</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14415948116430.html">
+                
+                  <h1>解决问题（一）——滑动tableview隐藏导航栏</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>原来很简单，在<code>tableview</code>或<code>scrollview</code>中调用此方法即可</p>
+
+<pre><code class="language-objc">-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    
+    newContentOffsetY = scrollView.contentOffset.y;
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    
+    if (scrollView.contentOffset.y &gt; newContentOffsetY) { // 向上拖拽
+        
+        // 隐藏
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+//                     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+        //             [self.navigationController setToolbarHidden:YES animated:YES];
+        //             _viewController.tabBarController.tabBar.hidden =YES;
+        
+    }
+    else{ // 向下拖拽
+
+        // 显示
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        
+    }
+}
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2015/9/7</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%9B%A2%E9%98%9FiOS%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95.html'>团队iOS开发记录</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14408668396688.html">
+                
+                  <h1>一个尚未成功的尝试 — 在UITableView的Cell中嵌入横向tableview 的实践</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>项目需要做出如下效果：在一个tableview的每个cell中实现横向滚动，展示各个不同地点所对应的图片资料。</p>
+
+<p><img src="media/14408668396688/%E5%B9%BF%E5%9C%BA%E5%89%AF%E6%9C%AC.png" alt="广场副本"/></p>
+
+<p>这个效果其实不新鲜，网上应该是有不少第三方或现成的方法的。只不过刚好时间，作为新手的我还是尝试自己的思路吧。</p>
+
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                   <a href="14408668396688.html">Read more</a>&nbsp;&nbsp; 
+                    <span class="date">2015/8/30</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html'>iOS学习笔记</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14392736201546.html">
+                
+                  <h1>给所有不喜欢大声说话的人 — 窦唯朴树的平凡之路</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<blockquote>
+<p>这是我为团队的公众号写的文章，公众号以后也会以此类内容为主。如果大家喜欢的话，可以扫描文章末尾的二维码关注。</p>
+</blockquote>
+
+<p>朴树终于回来了。</p>
+
+<p>继大热的《平凡之路》后，朴树近日又为电影《刺客聂隐娘》演唱了主题曲《在木星》。缅怀完自己的「平凡」十年后，他终于坚定地告诉我们「君已归来」。</p>
+
+<p><img src="media/14392736201546/link.jpeg" alt="link"/></p>
+
+<p>朴树的复出也让人联想起同样沉寂多年的窦唯。我们不禁想问一问，这两位「消失」多年的音乐人，为何总是让人念念不忘？</p>
+
+<p><img src="media/14392736201546/13082668063574933472.jpg" alt="13082668063574933472"/></p>
+
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                   <a href="14392736201546.html">Read more</a>&nbsp;&nbsp; 
+                    <span class="date">2015/8/19</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E8%AF%91%E8%A5%BF.html'>译西</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14394552964276.html">
+                
+                  <h1>GeekBand UI笔记 — 常用控件整理（一）</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2>UISwitch开关控件的使用</h2>
+
+<h3>如何创建</h3>
+
+<p>UISwitch 的大小是固定的 W51，H31，在Frame里的宽高设定其实是没用的。</p>
+
+<pre><code class="language-objc">UISwitch *switch = [[UISwitch alloc] initWithFrame:CGRectMake(100, 100, 100, 0)];
+[self.view addSubview:switch];
+</code></pre>
+
+<p>要检验的话，可以把上面这个开关的宽高参数打印出来比较。</p>
+
+<pre><code class="language-objc">NSLog(@&quot;%f %f&quot;, switch.frame.size.width, switch.frame.size.height);
+</code></pre>
+
+<h3>开关的事件处理</h3>
+
+<p>与普通Button的<code>Touch</code>事件类型不同，开关是<code>UIControlEventValueChanged</code>。</p>
+
+<pre><code class="language-objc">[switch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+</code></pre>
+
+<p>而开关的<code>value</code>只有两种：<code>YES</code> or <code>NO</code>，比如</p>
+
+<pre><code class="language-objc">switch.on = YES;
+</code></pre>
+
+<p>在事件触发的方法里，我们只需要用<code>if else</code>或<code>case</code>语句写好判断的逻辑，即可为「开和关」设置出不同的动作。</p>
+
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                   <a href="14394552964276.html">Read more</a>&nbsp;&nbsp; 
+                    <span class="date">2015/8/13</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html'>iOS学习笔记</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14393456546888.html">
+                
+                  <h1>GeekBand UI笔记 — Label</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h3>如何创建一个标签</h3>
+
+<pre><code class="language-objc">UILabel * label = [[UILabel alloc] init];
+//把label 加到界面上去
+[self.view addSubview:label];
+</code></pre>
+
+<h3>如何为label设置属性</h3>
+
+<h4>尺寸 — 尺寸是必不可少的参数</h4>
+
+<ul>
+<li>一般可以在init的时候直接调用 <code>initWithFrame</code> 的方法</li>
+</ul>
+
+<pre><code class="language-objc">    UILabel * myLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGFloat x, CGFloat y, CGFloat width, CGFloat height)];
+</code></pre>
+
+<p><code>CGRectMake</code> 用于在view上画矩形，四个参数分别是矩形左上角的x、y轴坐标，代表矩形的起始点—也就是说它们影响着矩形的位置；以及矩形的宽、高—影响矩形的大小。</p>
+
+<p><strong>注</strong>：x、y轴对矩形位置的影响是相对的，它还取决于最后你在 <code>[self.view addSubview:label];</code> 时把矩形添加到哪个<code>view</code>上，如以下代码，myLabel 的x、y坐标都是0，但由于它是被添加到一个自定义的<code>view1</code>上，而不是最底层的<code>self.view</code>上，所以它的<code>CGRectMake(0, 0, 100, 200)</code> 是相对于<code>view1</code>而言的。</p>
+
+<pre><code class="language-objc">    UIView * view1 = [[UIView alloc] initWithFrame:CGRectMake(50, 120, 200, 400)];
+    view1.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:view1];
+    
+    UILabel * myLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 200)];
+    myLabel.backgroundColor = [UIColor redColor];
+    [view1 addSubview:myLabel];
+</code></pre>
+
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                   <a href="14393456546888.html">Read more</a>&nbsp;&nbsp; 
+                    <span class="date">2015/8/12</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html'>iOS学习笔记</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14392006653218.html">
+                
+                  <h1>好Riff献给你，让爱传千里 — 第二集 || Guns'N'Roses - Catcher in the Rye</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>今天讲一点点硬摇。</p>
+
+<p>Glam 也好 Hair 也好，80 年代的 Hard Rock 一直被认为是金属乐进入主流的黄金时期。很多大师级的人马直到今天还活跃在各种大型现场，影响着无数新老乐迷。</p>
+
+<p>（这些乐队 logo 你还认得出多少？）<br/>
+<img src="media/14392006653218/glamhairlsleazeglitter.jpg" alt="glamhairlsleazeglitter"/></p>
+
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                   <a href="14392006653218.html">Read more</a>&nbsp;&nbsp; 
+                    <span class="date">2015/8/10</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E8%AF%91%E8%A5%BF.html'>译西</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14392001489282.html">
+                
+                  <h1>好Riff献给你，让爱传千里 — 第一集 || 香港独立乐队元老 AMK</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>作为半个金属党，相对于 solo，我其实更爱 riff。本来想憋一期《劲歌金 riff》出来的，想想这似乎更像是一个长期工作，所以倒不如试试一首一首来推介。</p>
+
+<p>当然 riff 并不是金属党专用，同时为了装逼及反装逼，这第一集我觉得首当其冲的就是香港元老独立乐队 AMK 的这首《请让我回家》。</p>
+
+<p><img src="media/14392001489282/11.jpg" alt="11"/></p>
+
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                   <a href="14392001489282.html">Read more</a>&nbsp;&nbsp; 
+                    <span class="date">2015/8/10</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E8%AF%91%E8%A5%BF.html'>译西</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14391996455933.html">
+                
+                  <h1>世上本无战事，人们只是深陷其中</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>近日在玩一款游戏叫《This War of Mine》，近几天才从 PC 端移植到 iPad。游戏背景是一座战火中的城市，但这次没有英雄打枪，只有几个被困在废墟里的普普通通的平民，每天在各种废墟中搜寻各种资源，确保自己可以活下去。</p>
+
+<p><img src="media/14391996455933/This-War-of-Mine.jpg" alt="This-War-of-Mine"/></p>
+
+<p>然而游戏的主旨却是「只靠翻垃圾堆可是没法活下去的哦少年」。为了活下去，你得精打细算地和别人交易，通宵站岗以防止被偷、被杀，然后渐渐地为了获得一个罐头、一瓶药而不得不反过来偷窃甚至杀人；而同时仅余的良知使你因此变得沮丧、崩溃，所以又不得不拿出珍贵的生存资源，换一瓶烈酒，只为能在这人间地狱里麻醉自己，多活一天是一天……</p>
+
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                   <a href="14391996455933.html">Read more</a>&nbsp;&nbsp; 
+                    <span class="date">2015/8/10</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E8%AF%91%E8%A5%BF.html'>译西</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14391942124795.html">
+                
+                  <h1>黑马iOS笔记</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<ul>
+<li>注释的用途——创建方法名
+在方法明上方可用<code>/** 方法名 */</code> 的格式，这样创建的方法便会有中文方法名提示。如：</li>
+</ul>
+
+<pre><code class="language-js">/** 创建表格 */
+-(void)createtable{
+
+    };
+</code></pre>
+
+<p>如下图<br/>
+<img src="media/14240102440099/11.png" alt="11"/></p>
+
+<ul>
+<li>改代码之前先把旧的注释掉，改完无误再删除。</li>
+<li>定义属性的时候，带<code>*</code>号的是地址，不是<code>strong</code>就是<code>weak</code>；没<code>*</code>号的比如<code>int</code>类型，就用<code>assign</code>。</li>
+<li>懒加载</li>
+</ul>
+
+<p><img src="media/14240102440099/14240147005230.jpg" alt=""/></p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2015/8/10</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html'>iOS学习笔记</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14381590028220.html">
+                
+                  <h1>GeekBand（二）iOS应用开发实战</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2>第二周</h2>
+
+<h3>MVC 模式</h3>
+
+<p>C 属于 M 和 V 之间的桥梁作用。V 和 M 一般没有直接联系，不直接进行通信。</p>
+
+<h3>创建导航条、底栏和底栏的按钮的逻辑</h3>
+
+<ol>
+<li>实例化一个 viewController</li>
+<li>实例化一个 navigationController，并用上面的 viewController 把它初始化</li>
+<li>为 navigationController设置标题、图标</li>
+<li>重复以上步骤得到足够的数量后</li>
+<li>实例化一个 tabBarController</li>
+<li>tabBarController 其实是一个数组，往数组里填上以上 navigationController</li>
+<li>设定该 window 的 rootViewController 为该 tabBarController</li>
+</ol>
+
+<h3>善用父类去统一设置不同 viewController 里一样的对象</h3>
+
+<p>比如说5个 viewController 都需要背景图，可以创建一个 baseViewController，里面写上统一的背景图的设置。然后让这些不同的 viewController 都继承自这个 baseViewController，再分别在这些 viewController 里写入不同参数即可——子类可直接调用父类的属性，需要注意的是，父类的属性必须写在<code>.h</code>文件里。</p>
+
+<h3>比较好的拉伸图片的方法</h3>
+
+<ol>
+<li>先对旧图创建一个 UIImage</li>
+<li>再创建一个新的 UIImage，对旧图用类方法 <code>[oldImage stretchableImageWithLeftCapWidth:10 topCapHeight:10]</code> 处理</li>
+<li>在需要用的地方放入<strong>新</strong>图即可
+<img src="media/14381590028220/14383949127417.jpg" alt=""/></li>
+</ol>
+
+<h3>为了不被诸多的 tag 搞乱</h3>
+
+<p>可以把 tag 定义成宏，比如 <code>#define kPushButtonTag    100</code></p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2015/7/29</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html'>iOS学习笔记</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="14377181857529.html">
+                
+                  <h1>GeekBand（一）OC 高级编程</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h3>do 循环：</h3>
+
+<p>一直做某件事情，直到某个条件不成立</p>
+
+<h3>continue：</h3>
+
+<p>跳过本次循环，进入下一次；而 break 则是跳出整个循环</p>
+
+<h3>条件运算符：</h3>
+
+<p><img src="media/14377181857529/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="条件运算符"/><br/>
+这张图的意思是当<code>age</code> 大于等于<code>18</code>时，<code>test</code>的值为<code>9</code>，否则为<code>10</code>。上方的条件运算符完全等价于下方的<code>if-else</code>表达式</p>
+
+<h3>限定词：</h3>
+
+<ul>
+<li><p><code>nonatomic</code>, <code>atomic</code>——原子的，同一时间只允许有一个线程访问，如果同时有多个线程/任务访问，那就要排队，会影响程序效率。所以一般会用「非原子的 <code>nonatomic</code>」，但相对而言，它的安全性会比<code>atomic</code>低。</p></li>
+<li><p><code>copy</code>——会复制一份出来，不会影响到原有的数据</p></li>
+<li><p><code>retain</code>——会导致对象的引用计数加 1</p></li>
+<li><p><code>strong</code>, <code>weak</code>——4.0之后才出现的，强引用和弱引用。<code>strong</code>等价于<code>retain</code>，<code>weak</code>等价于<code>assign</code>，不过<code>weak</code>只能用在对象性数据上</p></li>
+<li><p><code>assign</code>——一般用于修饰基本数据类型，比如 int，float 等无需星号的数据类型</p></li>
+<li><p><code>readonly</code>——只读，无法修改</p></li>
+</ul>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2015/7/24</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html'>iOS学习笔记</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="about.html">
+                
+                  <h1>About Yik-sai</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>尚未有详细介绍，欢迎到微博或Github交流。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2015/1/16</span>
+                    
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="asset/icon.jpg" /></div>
+            
+                <h1>Yik-sai</h1>
+                <div class="site-des">一个音乐与iOS并重的滚青。</div>
+                <div class="social">
+
+
+
+
+
+
+
+<a class="weibo" target="_blank" href="https://weibo.com/inthebushes" title="weibo">Weibo</a>
+
+<a class="github" target="_blank" href="https://github.com/leeguoyu" title="GitHub">GitHub</a>
+
+  <a class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E5%9B%A2%E9%98%9FiOS%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95.html"><strong>团队iOS开发记录</strong></a>
+        
+            <a href="iOS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"><strong>iOS学习笔记</strong></a>
+        
+            <a href="%E8%AF%91%E8%A5%BF.html"><strong>译西</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="14446574444255.html">Shakedown 1979</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14423349629558.html">解决问题（二）</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14415948116430.html">解决问题（一）——滑动tableview隐藏导航栏</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14408668396688.html">一个尚未成功的尝试 — 在UITableView的Cell中嵌入横向tableview 的实践</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14392736201546.html">给所有不喜欢大声说话的人 — 窦唯朴树的平凡之路</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+  
+    
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66155720-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
